@@ -6,7 +6,6 @@
 '''
 import yaml
 import pkg_resources
-
 from constant import PROJECT_NAME
 
 
@@ -85,7 +84,7 @@ class Config(DictAsClass):
         '''
         with open(
             pkg_resources.resource_filename(
-                PROJECT_NAME,
+                PROJECT_NAME+'.conf',
                 '{0}'.format(filename)
             )
         ) as ymlfile:

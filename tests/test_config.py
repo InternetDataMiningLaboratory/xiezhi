@@ -62,9 +62,9 @@ def test_Config(mock_dict_class, mock_open, mock_load, mock_resource):
 
     test_arg = 'test'
 
-    config = Config(test_arg)
+    Config(test_arg)
 
-    mock_resource.assert_called_with('test', test_arg)
+    mock_resource.assert_called_with('test.conf', test_arg)
     mock_open.assert_called_with('test')
     mock_load.assert_called_with('test')
     mock_dict_class.assert_called_with('test')

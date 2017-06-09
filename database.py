@@ -141,7 +141,8 @@ class DBBase(object):
                         break
                 if self_value != value:
                     return False
-        return True
+            return True
+        return False
 
     def _time(self, time):
         '''Method to transform ``time``.

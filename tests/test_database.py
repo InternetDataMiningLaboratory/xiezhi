@@ -45,8 +45,8 @@ def test_DBSession():
 def test_DBBase_eq(mock_decimal, mock_time):
     '''Test of ``database.DBBase.__eq__``
     '''
-    # Test 1: Non-dict object is considered equal
-    tools.assert_equals(DBBase(), 'test')
+    # Test 1: Non-dict object is not considered equal
+    tools.assert_not_equals(DBBase(), 'test')
 
     # Test 2: Dict object
     test_dict = {}
